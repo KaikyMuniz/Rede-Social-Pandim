@@ -1,0 +1,102 @@
+.container-perfil{
+    min-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.container-perfil img{
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+}
+
+.container-perfil .deslogar-imagem{
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: 700ms ease-in-out;
+}
+
+.deslogar-imagem:hover{
+    transform: scale(0.8);
+}
+
+.postagem{
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color:#F4F2F3;
+}
+
+hr{
+    border-color: #1e354d;
+}
+
+.perfil-imagem{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0 15px 0 0;
+    border-radius: 5px;
+}
+
+.postagem-btn{
+    background-color: #0D1721;
+    color: #F4F2F3;
+    font-family: "Poppins-Medium";
+    font-size: 1.3em;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 700ms ease-in-out;
+    opacity: 0.8;
+}
+
+.postagem-btn:hover{
+    background-color: #1e354d;
+    border-radius: 15px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.postagem-organizacao{
+    justify-content: left;
+    place-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+.organizar-data{
+    text-align: left;
+}
+
+.postagem-imagem-img{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.interacoes-postagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    place-items: center;
+}
+
+.like-imagem{
+    width: 25px;
+    cursor: pointer;
+}
+
+.deslike-imagem, .comentario-imagem, .denuncia-imagem{
+    width: 25px;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}

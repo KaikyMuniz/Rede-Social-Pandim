@@ -1,0 +1,86 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    overflow-x: hidden;
+    font-family: "Poppins";
+    background-image: url("../image/wallpaper/panda-of-britain-2692931_1920.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.foto-perfil{
+    margin: 10px 0 0 0;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: solid 5px #00000080;
+}
+
+.container-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.container{
+    background-color: #000000af;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+}
+
+.dados-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.postagens-usuario{
+    width: 50vw;
+    height: 80vh;
+    background-color: #000000af;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+    overflow-y: scroll;
+}
+
+.postagens-usuario::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+.postagens-usuario::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.726);
+}
+
+.postagens-usuario::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #ffffffb7;
+}
+
+.postagens-usuario::-webkit-scrollbar-thumb:hover{
+    background-color: #ffffff2c;
+}
+
+label{
+    text-decoration: none;
+    font-weight: normal;
+    color: #fff;
+    cursor: text;
+}
+
+.like-imagem, .deslike-imagem, .comentario-imagem, .denuncia-imagem{
+    filter: invert(1);
+}

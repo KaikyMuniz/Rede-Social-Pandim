@@ -1,0 +1,127 @@
+*{
+    font-family: "Poppins";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../image/wallpaper/bamboo-1283976.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.container{
+    background-image: linear-gradient(100deg, #10210db4, rgba(13, 33, 14, 0.855));
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding: 30px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    min-height: 50vh;
+    min-width: 60vw;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.img-container img{
+    width: 270px;
+}
+
+.img-container label{
+    font-size: 1em;
+}
+
+hr{
+    margin: 20px;
+    border-color: #F4F2F3;
+    height: 55vh;
+}
+
+h1, p{
+    color: #F4F2F3;
+}
+
+label{
+    color: #F4F2F3;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: text;
+}
+
+.erro-mensagem{
+    font-size: 1em;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+a{
+    text-decoration: underline 2px;
+    color: #c9c9c9;
+    font-family: "Poppins-SemiBold";
+}
+
+input{
+    background-color: #69d6217a;
+    min-width: 18vw;
+    min-height: 4vh;
+    margin: 3px 0 0 0;
+    border-top-color: transparent;
+    border-radius: 5px;
+    border-color: transparent #ffffff83 #ffffff83 transparent;
+    color: #F4F2F3;
+    font-size: 1em;
+    font-family: "Poppins-SemiBold";
+    letter-spacing: 1px;
+}
+
+input::placeholder{
+    color: #F4F2F3;
+    font-family: "Poppins-Medium";
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.container-btn-center{
+    display: flex;
+    width: 100%;
+    place-items: center;
+    justify-content: center;
+}
+
+.btn-submit{
+    min-height: 5vh;
+    min-width: 8vw;
+    padding: 5px;
+    font-family: "Poppins-SemiBold";
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 700ms ease-in-out;
+}
+
+.btn-submit:hover{
+    background-color: #69d621b0;
+    border-radius: 10px;    
+}
+
+@media(max-width: 900px){
+    .img-container{
+        display: none;
+    }
+
+    hr{
+        display: none;
+    }
+}

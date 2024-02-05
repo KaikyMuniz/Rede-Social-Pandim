@@ -1,0 +1,136 @@
+*{
+    font-family: "Poppins-Regular";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F4F2F3;
+    /** background-attachment: fixed; -> FIXAR IMAGEM DE FUNDO**/
+}
+
+:root{
+    --Cor-principal: var(#0D1721);
+    --Cor-texto: var(#F4F2F3);
+}
+
+
+.container-cabecalho{
+    min-width: 100vw;
+    padding: 15px 0 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: flex-start;
+    background-color: #0D1721;
+}
+
+.logo-cabecalho{
+    width: 70px;
+}
+
+.nome-cabecalho{
+    color: #F4F2F3;
+}
+
+.logo-span{
+    margin: 0 0 0 100px;
+}
+
+.link-perfil{
+    display: block;
+    width: min-content;
+}
+
+span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    place-items: center;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    color: #0D1721;
+    font-family: "Poppins-Bold";
+}
+
+label{
+    font-weight: bold;
+    color: #0D1721;
+    cursor: pointer;
+}
+
+.ocultar-login{
+    display: none;
+}
+
+.ocultar-deslogar{
+    display: none;
+}
+
+.cabecalho-imagem{
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.container-principal{
+    display: flex;
+    justify-content: left;
+    min-width: 100vw;
+}
+
+.imagem_perfil{
+    object-fit: cover;
+}
+
+.container-postagem{
+    min-width: 55vw;
+    max-height: 100vh;
+    color: #0D1721;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.container-em-alta{
+    min-width: 25vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.tema-alta-div{
+    background-color: #0D1721;
+    color: #F4F2F3;
+    font-family: "Poppins-SemiBold";
+    font-size: 1.3em;
+    border-radius: 5px;
+    min-width: 15vw;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: #1e354d71 0 3px 5px 3px;
+    transition: 700ms ease-in-out;
+}
+
+.tema-alta-div:hover{
+    background-color: #1e354d;
+    color: #ffffff;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+h3{
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 10px;
+    font-size: 1.2em;
+}

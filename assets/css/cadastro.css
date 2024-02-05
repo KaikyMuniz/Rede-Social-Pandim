@@ -1,0 +1,168 @@
+*{
+    font-family: "Poppins";
+    color: #fff;
+}
+
+body{
+    min-width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url("../image/wallpaper/panda-4655326_1920.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.etapa2{
+    background-image: url("../image/wallpaper/panda-4421395.jpg");
+}
+
+.etapa3{
+    background-image: url("../image/wallpaper/animal-1236875.jpg");
+    background-position: center;
+}
+
+.etapa4{
+    background-image: url("../image/wallpaper/panda-5457768.jpg");
+}
+
+.container{
+    background-image: linear-gradient(100deg, #000000b4, rgba(40, 40, 40, 0.855));
+    text-align: center;
+    padding: 10px 20px 15px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.escolher-imagem{
+    width: 100px;
+    height: 100px;
+    filter: invert(1);
+    border-radius: 50%;
+}
+
+.escolher-imagem-input{
+    display: none;
+}
+
+.escolher-imagem-label{
+    background-color: #000000b4;
+    color: #ffffff;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 700ms ease-in-out;
+}
+
+.escolher-imagem-label:hover{
+    background-color: #00000085;
+    border-radius: 10px;
+}
+
+.container-sequencia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-width: 100vw;
+    position: absolute;
+    top: 90%;
+}
+
+.btn-ordem{
+    width: 160px;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #727272b4;
+    cursor: pointer;
+}
+
+.btn-ordem-ativado{
+    background-color: #fffffff6;
+}
+
+input{
+    background-color: #000000b4;
+    min-width: 18vw;
+    min-height: 4vh;
+    margin: 3px 0 0 0;
+    border-top-color: transparent;
+    border-radius: 5px;
+    border-color: transparent #ffffff83 #ffffff83 transparent;
+    color: #fff;
+    font-size: 1em;
+    font-family: "Poppins-Medium";
+    letter-spacing: 1px;
+}
+
+input::placeholder{
+    color: #fff;
+    font-family: "Poppins-Medium";
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+label{
+    cursor: text;
+    font-size: 1.1em;
+    font-family: "Poppins-Medium";
+}
+
+.btn-continuar{
+    min-height: 5vh;
+    min-width: 8vw;
+    padding: 5px;
+    font-family: "Poppins-SemiBold";
+    font-size: 1.2em;
+    cursor: pointer;
+    border-top-color: transparent;
+    border-radius: 5px;
+    border-color: transparent #00000085 #00000085 transparent;
+    background-color: #000000b4;
+    transition: 700ms ease-in-out;
+}
+
+.btn-continuar:hover{
+    background-color: #00000085;
+    border-radius: 10px;    
+}
+
+.radio{
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+.container-radio-input{
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+}
+
+textarea{
+    color: #fff;
+    resize: none;
+    font-family: "Poppins-Medium";
+    min-width: 35vw;
+    min-height: 30vh;
+    border-radius: 5px;
+    background-color: #000000b4;
+    border-width: 2px;
+    border-color: #ffffffa2;
+    font-size: 1em;
+}
+
+textarea::placeholder{
+    font-family: "Poppins-SemiBold";
+}
+
+a{
+    text-decoration: underline 2px;
+    font-family: "Poppins-SemiBold";
+}

@@ -1,0 +1,97 @@
+*{
+    font-family: "Poppins";
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("../image/wallpaper/panda3.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    overflow-x: hidden;
+}
+
+.container{
+    background-image: linear-gradient(100deg, #00000083, rgba(40, 40, 40, 0.855));
+    text-align: center;
+    padding: 10px 20px 15px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+}
+
+input{
+    background-color: #00000083;
+    min-width: 18vw;
+    min-height: 4vh;
+    margin: 3px 0 0 0;
+    border-top-color: transparent;
+    border-radius: 5px;
+    border-color: transparent #ffffff83 #ffffff83 transparent;
+    color: #fff;
+    font-size: 1em;
+    font-family: "Poppins-Medium";
+    letter-spacing: 1px;
+}
+
+input::placeholder{
+    font-family: "Poppins-Medium";
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+label{
+    cursor: text;
+    font-size: 1.1em;
+    font-family: "Poppins-Medium";
+}
+
+textarea{
+    color: #fff;
+    resize: none;
+    font-family: "Poppins-Medium";
+    min-width: 35vw;
+    min-height: 30vh;
+    border-radius: 5px;
+    background-color: #00000083;
+    border-width: 2px;
+    border-color: transparent #ffffff83 #ffffff83 transparent;
+    font-size: 1em;   
+}
+
+textarea::placeholder{
+    font-family: "Poppins-Medium";
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: underline 2px;
+    font-family: "Poppins-SemiBold";
+    color: #fff;
+}
+
+.btn-continuar{
+    min-height: 5vh;
+    min-width: 8vw;
+    padding: 5px;
+    font-family: "Poppins-SemiBold";
+    font-size: 1.2em;
+    cursor: pointer;
+    border-top-color: transparent;
+    border-radius: 5px;
+    border-color: transparent #00000085 #00000085 transparent;
+    background-color: #000000b4;
+    transition: 700ms ease-in-out;
+}
+
+.btn-continuar:hover{
+    background-color: #00000085;
+    border-radius: 10px;    
+}
