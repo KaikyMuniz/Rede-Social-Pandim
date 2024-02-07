@@ -20,10 +20,35 @@
                 <label for="email">Insira seu Email:</label>
                 <br>
                 <input type="email" name="email" id="email" placeholder="Email:">
+                <?php
+                    if(isset($_GET['erro-email-tamanho'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ O email deve ter no máximo 32 caracteres
+                        </label>";
+                    }
+                ?>
                 <p></p>
                 <label for="senha">Insira sua Senha:</label>
                 <br>
                 <input type="password" name="senha" id="senha" placeholder="Senha:">
+                <?php
+                    if(isset($_GET['erro-nulo'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ Você deve preencher todos os campos acima
+                        </label>";
+                    }
+                    if(isset($_GET['erro-senha-tamanho'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ A senha deve ter entre 8 e 16 caracteres
+                        </label>";
+                    }
+                ?>
                 <p></p>
                 <label>Confira os nossos termos de uso <a href=#>Clicando aqui</a>.</label>
                 <p></p>
@@ -38,4 +63,5 @@
         <div id="btn-ordem-4" class="btn-ordem btn-ordem-ativado"></div>        
     </div>
 </body>
+<script type="text/javascript" src="../js/tratar-erros.js"></script> 
 </html>

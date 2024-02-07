@@ -6,7 +6,7 @@
     function VerificarNulos(...$args) {
         foreach ($args as $value) {
             if ($value === null || $value === "") {
-                $erro_campo_nulo = "O campo não deve ser nulo";
+                $erro_campo_nulo = "erro-nulo";
                 header("Location: ../pages/cadastro-tela-2.php?$erro_campo_nulo");
                 exit;
             }

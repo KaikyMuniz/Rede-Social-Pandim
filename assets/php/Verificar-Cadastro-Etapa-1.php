@@ -8,8 +8,8 @@
     function VerificarNulos(...$args) {
         foreach ($args as $value) {
             if ($value === null || $value === "") {
-                $erro_campos_nulos = "Os campos não devem ser nulos";
-                header("Location: ../pages/cadastro-tela-1.html?$erro_campos_nulos");
+                $erro_campos_nulos = "erro-nulo";
+                header("Location: ../pages/cadastro-tela-1.php?$erro_campos_nulos");
                 exit;
             }
         }
@@ -19,13 +19,13 @@
 
     function UploadImagem($imagem_perfil){
         if($imagem_perfil['error']){
-            $erro_imagem = "Falha ao enviar arquivo";
-            header("Location: ../pages/cadastro-tela-1.html?erro=$erro_imagem");
+            $erro_imagem = "erro-arquivo";
+            header("Location: ../pages/cadastro-tela-1.php?$erro_imagem");
             exit;
         }
         if($imagem_perfil['size'] > 4194304){
-            $erro_tamanho_imagem = "Arquivo muito grande! Máximo: 4MB";
-            header("Location: ../pages/cadastro-tela-1.html?erro=$erro_tamanho_imagem");
+            $erro_tamanho_imagem = "erro-tamanho-arquivo";
+            header("Location: ../pages/cadastro-tela-1.php?$erro_tamanho_imagem");
             exit;
         }else{
             $pasta_perfil = "../image/perfil/";
@@ -33,8 +33,8 @@
             $novo_nome_imagem = uniqid(); // criptografar o nome
             $extensao = strtolower(pathinfo($nome_imagem, PATHINFO_EXTENSION)); // path = caminho, dedutivo o resto
             if($extensao != "jpg" && $extensao != "png" && $extensao != "jpeg"){
-                $erro_formato_imagem = "Formato de imagem inválido! Utilize jpg, png ou jpeg";
-                header("Location: ../pages/cadastro-tela-1.html?erro=$erro_formato_imagem");
+                $erro_formato_imagem = "erro-formato-imagem";
+                header("Location: ../pages/cadastro-tela-1.php?$erro_formato_imagem");
                 exit;
             }else{
                 $path = $pasta_perfil . $novo_nome_imagem . "." . $extensao;
@@ -47,7 +47,8 @@
                     );
                     $_SESSION['imagem_perfil_cadastro'] = $dados_upload_imagem;
                 }else{
-                    header("Location: ../pages/cadastro-tela-1.html");
+                    $erro_imagem = "erro-arquivo";
+                    header("Location: ../pages/cadastro-tela-1.php?$erro_imagem");
                 }
             }
         }
@@ -56,14 +57,30 @@
     VerificarCaracteres($nome_usuario, $data_nascimento);
     function VerificarCaracteres($nome_usuario, $data_nascimento){
         if (preg_match('/^[a-zA-Z0-9_]+$/', $nome_usuario)){
-            $_SESSION['nome_usuario_cadastro'] = $nome_usuario;
+            if(strlen($nome_usuario) < 32){
+                $_SESSION['nome_usuario_cadastro'] = $nome_usuario;
+                VerificarIdade($data_nascimento);
+            }else{
+                $erro_numero_caracter = "erro-numero-caracter";
+                header("Location: ../pages/cadastro-tela-1.php?$erro_numero_caracter");
+            }
+        }
+        else {
+            $erro_caracter = "erro-caracter";
+            header("Location: ../pages/cadastro-tela-1.php?$erro_caracter");
+        }
+    }
+
+    function VerificarIdade($data_nascimento){
+        $ano_nascimento = explode('-', $data_nascimento)[0];
+        $idade_usuario = date("Y") - $ano_nascimento;
+        if($idade_usuario >= 18){
             $_SESSION['data_nascimento_cadastro'] = $data_nascimento;
             header("Location: ../pages/cadastro-tela-2.php");
             exit;
-        }
-        else {
-            $erro_caracter = "Use apenas letras, números ou '_'";
-            header("Location: ../pages/cadastro-tela-1.html?erro=$erro_caracter");
+        }else{
+            $erro_idade = "erro-idade";
+            header("Location: ../pages/cadastro-tela-1.php?$erro_idade");   
         }
     }
 ?>

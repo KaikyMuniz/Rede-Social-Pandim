@@ -41,7 +41,7 @@
             <br>Entrar</a>
         </span>
         <span class="<?php echo $classe_login; ?>">
-            <a href="assets/pages/cadastro-tela-1.html"><img class="cabecalho-imagem" src="assets/image/icon/cadastro.png" alt="icon">
+            <a href="assets/pages/cadastro-tela-1.php"><img class="cabecalho-imagem" src="assets/image/icon/cadastro.png" alt="icon">
             <br>Cadastrar</a>
         </span>
     </nav>

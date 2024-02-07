@@ -38,6 +38,15 @@
                     <label for="prefiro">Prefiro não dizer</label>
                 </div>
                 </span>
+                <?php
+                    if(isset($_GET['erro-nulo'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ Você deve selecionar alguma das opções acima
+                        </label>";
+                    }
+                ?>
                 <p></p>
                 <button class="btn-continuar" id="continuar">Continuar</button>
             </form>
@@ -50,4 +59,5 @@
         <div id="btn-ordem-4" class="btn-ordem"></div>        
     </div>
 </body>
+<script type="text/javascript" src="../js/tratar-erros.js"></script>
 </html>

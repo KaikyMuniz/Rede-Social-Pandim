@@ -18,6 +18,22 @@
                 <h1>Você está quase lá <?php echo $_SESSION['nome_usuario_cadastro']; ?>!</h1>
                 <h2>Agora insira sua descrição:</h2>
                 <textarea id="descricao" name="descricao" placeholder="Dedique esse campo para falar sobre você :)"></textarea>
+                <?php
+                    if(isset($_GET['erro-nulo'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ Você deve preencher o campo acima
+                        </label>";
+                    }
+                    if(isset($_GET['erro-numero-caracter'])){
+                        echo 
+                        "<br>
+                        <label id='erroMensagem' class='erro-mensagem'>
+                            ⚠ A descrição deve ter no máximo 200 caracteres
+                        </label>";
+                    }
+                ?>
                 <p></p>
                 <button class="btn-continuar" id="continuar">Continuar</button>
             </form>
@@ -30,4 +46,5 @@
         <div id="btn-ordem-4" class="btn-ordem"></div>        
     </div>
 </body>
+<script type="text/javascript" src="../js/tratar-erros.js"></script>
 </html>

@@ -48,7 +48,7 @@
                     <input class="btn-submit" type="submit" value="Entrar">
                 </div>
                 <br>
-                <p>Ainda não tem uma conta?<br><a href="cadastro-tela-1.html">Faça seu cadastro clicando aqui</a></p>
+                <p>Ainda não tem uma conta?<br><a href="cadastro-tela-1.php">Faça seu cadastro clicando aqui</a></p>
             </form>
         </div>
     </div>
