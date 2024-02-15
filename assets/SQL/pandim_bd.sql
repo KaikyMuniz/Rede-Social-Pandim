@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 05-Fev-2024 às 16:42
+-- Tempo de geração: 15-Fev-2024 às 19:49
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -43,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `imagem_perfil` (
 --
 
 INSERT INTO `imagem_perfil` (`id`, `nome_imagem`, `path`, `data_upload`, `nome_usuario`) VALUES
-(1, '15.png', '../image/perfil/65c10b265cd5b.png', '2024-02-05 13:24:49', 'User1'),
-(2, 'cat-4189697_640.jpg', '../image/perfil/65c10c21d0bf0.jpg', '2024-02-05 13:26:34', 'User2');
+(1, '(❛‿❛).png', '../image/perfil/65cd42f36443a.png', '2024-02-14 19:47:15', 'Kaiky'),
+(2, 'candidato3.jpg', '../image/perfil/65ce6a7d24c4a.jpg', '2024-02-15 16:48:13', 'Joao');
 
 -- --------------------------------------------------------
 
@@ -61,15 +61,14 @@ CREATE TABLE IF NOT EXISTS `imagem_postagem` (
   `nome_usuario` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `nome_usuario` (`nome_usuario`(250))
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `imagem_postagem`
 --
 
 INSERT INTO `imagem_postagem` (`id`, `nome_imagem`, `path`, `data_upload`, `nome_usuario`) VALUES
-(1, 'canyon-1740973_1280.jpg', '../image/postagem/65c10e8fe2799.jpg', '2024-02-05 13:36:31', 'User1'),
-(2, 'maldives-1993704_1280.jpg', '../image/postagem/65c10ee19d923.jpg', '2024-02-05 13:37:53', 'User2');
+(1, 'code-820275_1920.jpg', '../image/postagem/65ce6aaee960d.jpg', '2024-02-15 16:49:02', 'Joao');
 
 -- --------------------------------------------------------
 
@@ -86,15 +85,14 @@ CREATE TABLE IF NOT EXISTS `postagens` (
   `imagem_postagem` varchar(255) NOT NULL,
   `data_da_postagem` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `postagens`
 --
 
 INSERT INTO `postagens` (`id`, `autor`, `titulo`, `descricao`, `imagem_postagem`, `data_da_postagem`) VALUES
-(1, 'User1', 'Título da Postagem', 'Descrição da postagem com imagem abaixo', '../image/postagem/65c10e8fe2799.jpg', '2024-02-05'),
-(2, 'User2', 'Lindo!!', 'Olhem essa paisagem!', '../image/postagem/65c10ee19d923.jpg', '2024-02-05');
+(1, 'Joao', 'Olá gente!', 'Como vocês estão?', '../image/postagem/65ce6aaee960d.jpg', '2024-02-15');
 
 -- --------------------------------------------------------
 
@@ -121,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome_de_usuario`, `data_de_nascimento`, `sexo`, `descricao`, `email`, `senha`, `seguidores`, `seguindo`) VALUES
-(1, 'User1', '2000-01-01', 'M', 'Olá mundo', 'user1@gmail.com', '$2y$10$V5..R1KAE2T7nALdYMC9QeVGxtwuPywNrkjXpNMy9BVF/vj.WQodu', 0, 0),
-(2, 'User2', '2000-02-02', 'F', 'Olá gente!', 'user2@gmail.com', '$2y$10$s/UE7wEN3opmzAt.7PlWAuxQDji3SlxlaSRndqAOSNNyb9q2lomNy', 0, 0);
+(1, 'Kaiky', '2006-03-03', 'M', 'Olá mundo', 'kaiky@gmail.com', '$2y$10$Qt0uz//LKTe6zjWZIgtNte3JLyo1QCJ/MBRirsHKItOGf.W.GjE5S', 0, 0),
+(2, 'Joao', '2000-12-01', 'M', 'Olá', 'Joao123@gmail.com', '$2y$10$3kosv/.glO1jcEQ563bGjO37Ya4Hjf2h9QT0/V3ruxto2zTNVv/he', 0, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
