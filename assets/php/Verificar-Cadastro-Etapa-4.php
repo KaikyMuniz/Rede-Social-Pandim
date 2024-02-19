@@ -29,6 +29,6 @@
 
     $_SESSION['email_cadastro'] = $email;
     $_SESSION['senha_cadastro'] = $senha;
-    header("Location: Cadastrar-Usuario.php");
+    header("Location: ../pages/verificacao-email.php");
     exit;
 ?>

@@ -22,6 +22,7 @@
             unset($_SESSION['descricao_cadastro']);
             unset($_SESSION['email_cadastro']);
             unset($_SESSION['senha_cadastro']);
+            unset($_SESSION['code_cadastro']);
             header("Location: ../pages/escolher-imagem-perfil.php");
             exit;
         }else{
