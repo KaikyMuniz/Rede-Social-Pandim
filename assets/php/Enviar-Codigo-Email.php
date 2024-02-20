@@ -42,7 +42,7 @@
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'suportepandim@gmail.com';
-        $mail->Password = 'gimb tztr aoei vauz';
+        $mail->Password = 'minha senha';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'utf8';
